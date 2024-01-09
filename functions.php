@@ -30,7 +30,7 @@ function buildPagination(int $page, int $numFound, string $author): string
 function buildListView(): string
 {
     $data = getData($_GET['author'], isset($_GET['page']) ? (int)$_GET['page'] : 1);
-//    echo "<pre>"; print_r($data);
+
     if (!isset($data['items'])) {
         return "No results found";
     }
